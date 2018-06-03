@@ -9,4 +9,8 @@
     Property cantidad As Integer
     Property precio As Double
     Property subTotal As Double
+
+    Public Factura()
+
+
 End Class
