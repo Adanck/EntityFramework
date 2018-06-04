@@ -7,5 +7,6 @@ namespace DAOClient
 {
     public class Client
     {
+
     }
 }
