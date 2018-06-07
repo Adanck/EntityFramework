@@ -2,9 +2,9 @@
     ' Insertar, Modificar, Consultar y Eliminar 
     'Cédula, Nombre, Apellido, Correo Electrónico -validar formato correcto- y teléfono
 
-    Property Cedula As Integer
-    Property Nombre As String
-    Property Apellido As String
+    Property idNumber As Integer
+    Property Name As String
+    Property LastName As String
     Property Email As String
-    Property Telefono As Integer
+    Property Telephone As Integer
 End Class
