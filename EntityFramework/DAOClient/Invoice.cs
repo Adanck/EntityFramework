@@ -14,6 +14,21 @@ namespace DAOClient
     
     public partial class Invoice
     {
+
+        public Invoice()
+        {
+
+        }
+        public Invoice(int number, int amount, decimal price, decimal sub_total, string code, int id)
+        {
+            this.Number = number;
+            this.Amount = amount;
+            this.Price = price;
+            this.Sub_Total = sub_total;
+            this.Code_Product = code;
+            this.Id_Client = id;
+
+        }
         public int Number { get; set; }
         public int Amount { get; set; }
         public decimal Price { get; set; }
