@@ -19,6 +19,15 @@ namespace DAOClient
         {
             this.Invoices = new HashSet<Invoice>();
         }
+
+        public Client(int id, String name, String lastName, String email, int phone) {
+            this.Id = id;
+            this.Name = name;
+            this.Last_Name = lastName;
+            this.Email = email;
+            this.Phone = phone;
+        }
+
     
         public int Id { get; set; }
         public string Name { get; set; }

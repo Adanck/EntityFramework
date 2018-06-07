@@ -55,6 +55,7 @@
     <Compile Include="Client.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAOClient.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>StoreModel.tt</DependentUpon>
     </Compile>
@@ -105,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TObject\TObject.vbproj">
+      <Project>{eaf400f6-4dfd-481c-ae34-14f6c3c31672}</Project>
+      <Name>TObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
