@@ -20,6 +20,7 @@ namespace DAOClient
         public decimal Sub_Total { get; set; }
         public string Code_Product { get; set; }
         public int Id_Client { get; set; }
+        public System.DateTime Date_Time { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual Product Product { get; set; }

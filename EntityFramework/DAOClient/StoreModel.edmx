@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="Id" />
@@ -25,6 +25,7 @@
           <Property Name="Sub_Total" Type="money" Nullable="false" />
           <Property Name="Code_Product" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Id_Client" Type="int" Nullable="false" />
+          <Property Name="Date_Time" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -76,8 +77,7 @@
             <End Role="Invoice" EntitySet="Invoice" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -104,6 +104,7 @@
           <Property Name="Id_Client" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Client" Relationship="Self.FK_Client_Invoice_Cascade" FromRole="Invoice" ToRole="Client" />
           <NavigationProperty Name="Product" Relationship="Self.FK_Producto_Factura_Cascade" FromRole="Invoice" ToRole="Product" />
+          <Property Name="Date_Time" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -176,6 +177,7 @@
           <EntitySetMapping Name="Invoices">
             <EntityTypeMapping TypeName="StoreModel.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="Price" ColumnName="Price" />

@@ -102,6 +102,16 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAOClient\DAO.csproj">
+      <Project>{0c7bc982-a438-4822-8cf1-dfd3752062a7}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TObject\TObject.vbproj">
+      <Project>{eaf400f6-4dfd-481c-ae34-14f6c3c31672}</Project>
+      <Name>TObject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
