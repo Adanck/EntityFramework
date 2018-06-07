@@ -12,19 +12,18 @@ namespace DAOClient
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public Product()
         {
             this.Invoices = new HashSet<Invoice>();
         }
     
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Last_Name { get; set; }
-        public string Email { get; set; }
-        public int Phone { get; set; }
+        public string Code { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public int Amount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Invoice> Invoices { get; set; }
