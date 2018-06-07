@@ -13,7 +13,7 @@
     End Sub
     Public Property Code As String
     Public Property Description As String
-    Public Property Price As Double
+    Public Property Price As Decimal
     Public Property Amount As Integer
 
 
